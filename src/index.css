@@ -221,3 +221,182 @@ pokemon-info {
   }
 }
 
+/* Original CSS remains the same above */
+
+/* Responsive Styles */
+@media screen and (max-width: 1536px) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+  
+  .pokemon-card {
+    width: 100%;
+    min-height: 42rem;
+  }
+  
+  h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+  
+  .grid-three-cols {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 2.4rem;
+  }
+  
+  .pokemon-card {
+    max-width: 48rem;
+    margin: 0 auto;
+    min-height: 48rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+
+  .pokemon-card::before {
+    height: 45%;
+    z-index: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.02);
+  }
+
+  figure {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.6rem;
+    transition: transform 0.3s ease;
+  }
+
+  .pokemon-card:hover figure {
+    transform: translateY(-8px);
+  }
+  
+  .pokemon-name {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+    font-size: 2.8rem;
+  }
+  
+  .pokemon-highlight {
+    margin: 1.2rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  pokemon-info {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-top: 1.6rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.8rem;
+  }
+  
+  .pokemon-image {
+    width: 50%;
+    height: 12rem;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+
+  .pokemon-card:hover .pokemon-image {
+    transform: scale(1.1);
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    max-width: 32rem;
+  }
+  
+  h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .container {
+    padding: 0 1.6rem;
+  }
+  
+  .pokemon-card {
+    min-height: 42rem;
+    padding: 1.2rem;
+  }
+  
+  .pokemon-name {
+    font-size: 2.6rem;
+  }
+  
+  pokemon-info {
+    margin-top: 1.2rem;
+    padding: 0.8rem;
+  }
+  
+  header {
+    margin: 2.4rem 0;
+  }
+  
+  .short-container {
+    width: 100%;
+    padding: 0 2.4rem;
+  }
+
+  /* Slightly reduce hover effects for mobile */
+  .pokemon-card:hover {
+    transform: scale(1.01);
+  }
+
+  .pokemon-card:hover figure {
+    transform: translateY(-4px);
+  }
+
+  .pokemon-card:hover .pokemon-image {
+    transform: scale(1.05);
+  }
+}
+
+/* Fix for larger screens */
+@media screen and (min-width: 1537px) {
+  .pokemon-card {
+    width: 100%;
+    max-width: 36rem;
+  }
+}
